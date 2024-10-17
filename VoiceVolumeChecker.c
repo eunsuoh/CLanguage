@@ -1,12 +1,25 @@
-def quiet_speaking_advice(speaking_volume):
-    if speaking_volume > 70:
-        return "Your speaking volume is too high! Please speak more quietly."
-    elif speaking_volume > 50:
-        return "Try lowering your voice a bit."
-    else:
-        return "Good! You are speaking at the perfect volume."
+#include <stdio.h>
 
-# Example: Input user's speaking volume
-user_volume = int(input("Enter speaking volume (0-100): "))
-advice = quiet_speaking_advice(user_volume)
-print(advice)
+// Quiet speaking advice function
+void quiet_speaking_advice(int speaking_volume) {
+    if (speaking_volume > 70) {
+        printf("Your speaking volume is too high! Please speak more quietly.\n");
+    } else if (speaking_volume > 50) {
+        printf("Try lowering your voice a bit.\n");
+    } else {
+        printf("Good! You are speaking at the perfect volume.\n");
+    }
+}
+
+int main() {
+    int user_volume;
+
+    // Input speaking volume
+    printf("Enter speaking volume (0-100): ");
+    scanf("%d", &user_volume);
+
+    // Call quiet speaking advice function
+    quiet_speaking_advice(user_volume);
+
+    return 0;
+}
