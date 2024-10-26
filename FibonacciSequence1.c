@@ -11,7 +11,6 @@ int main() {
     int n;
     printf("Enter the value of N: ");
     scanf("%d", &n);
-
     printf("Fibonacci number at position %d is %d\n", n, fib1(n));
     
     return 0;
